@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  cursor: default;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  min-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px 2px lightgrey;
+}
+
+.panel-one {
+  grid-column: 1/span 1;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 50px;
+  justify-items: center;
+  align-content: center;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: white;
+}
+.panel-one__header {
+  font-size: 25px;
+  color: rgb(203, 200, 255);
+}
+.panel-one__percentage {
+  background: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.panel-one__percentage .big-number {
+  font-size: 60px;
+  font-weight: bolder;
+}
+.panel-one__percentage .small-number {
+  color: rgb(182, 182, 255);
+  font-weight: 300;
+}
+.panel-one__level {
+  font-size: 45px;
+  font-weight: 500;
+}
+.panel-one__results {
+  color: rgb(182, 182, 255);
+  font-size: 29px;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 25px;
+}
+
+.panel-two {
+  grid-column: 2/span 1;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  row-gap: 49px;
+  align-content: center;
+  padding: 0 35px;
+}
+.panel-two .testDiv {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(146, 143, 158);
+  font-size: 20px;
+  font-weight: 500;
+}
+.panel-two .testDiv span {
+  color: rgb(66, 68, 82);
+}
+.panel-two__header {
+  font-size: 25px;
+}
+.panel-two__test1 {
+  background: rgb(255, 246, 246);
+}
+.panel-two__test1 .reaction {
+  color: rgb(212, 112, 116);
+}
+.panel-two__test2 {
+  background: rgb(255, 251, 243);
+}
+.panel-two__test2 .memory {
+  color: rgb(225, 174, 64);
+}
+.panel-two__test3 {
+  background: rgb(243, 251, 250);
+}
+.panel-two__test3 .verbal {
+  color: rgb(31, 168, 131);
+}
+.panel-two__test4 {
+  background: rgb(243, 243, 254);
+}
+.panel-two__test4 .visual {
+  color: rgb(25, 37, 174);
+}
+.panel-two button {
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 400;
+  background: rgb(48, 59, 89);
+  color: white;
+  border-radius: 30px;
+  border: none;
+}
+.panel-two button:hover {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media only screen and (max-width: 430px) {
+  .container {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    min-width: 430px;
+    border-radius: 0;
+  }
+  .panel-one {
+    grid-column: 1/span 2;
+    grid-row: 1/span 1;
+    row-gap: 15px;
+    border-radius: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .panel-one__header {
+    font-size: 18px;
+  }
+  .panel-one__percentage {
+    width: 150px;
+    height: 150px;
+  }
+  .panel-one__level {
+    font-size: 35px;
+  }
+  .panel-one__results {
+    font-size: 19px;
+  }
+  .panel-two {
+    grid-column: 1/span 2;
+    grid-row: 2/span 1;
+    row-gap: 15px;
+    border-radius: 0;
+  }
+  .panel-two__header {
+    font-size: 15px;
+  }
+  .panel-two .testDiv {
+    padding: 15px;
+  }
+}/*# sourceMappingURL=index.css.map */
